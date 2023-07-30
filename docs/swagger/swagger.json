@@ -1,0 +1,30 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "A Software for study goLang",
+        "title": "Red Dwarf",
+        "contact": {
+            "name": "Matheus Abreu"
+        },
+        "version": "1.0"
+    },
+    "paths": {
+        "/health": {
+            "get": {
+                "description": "Health cheack",
+                "produces": [
+                    "text/plain"
+                ],
+                "summary": "Check if the service is running.",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
