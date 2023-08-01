@@ -2,7 +2,7 @@ package main
 
 import (
 	"net/http"
-	"github.com/matheusAbreu/red-dwarf/config"
+	"github.com/matheusAbreu/red-dwarf/utils"
 	"github.com/matheusAbreu/red-dwarf/api/healthCheck"
 	"github.com/gofiber/fiber/v2/middleware/compress"
 	"github.com/gofiber/fiber/v2/middleware/cors"
@@ -21,7 +21,7 @@ func main() {
 			// DisableStartupMessage: true,
 		})
 
-		if config.GetEnvBool("GO_PROFILING"){
+		if utils.GetEnvBool("GO_PROFILING"){
 			app.Use(pprof.New())
 		}
 
